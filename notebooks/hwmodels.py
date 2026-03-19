@@ -6,7 +6,6 @@ import dataclasses
 @dataclass
 class Ride:
     lpep_pickup_datetime: object
-    lpep_dropoff_datetime: object
     PULocationID: int
     DOLocationID: int
     passenger_count: int
@@ -17,7 +16,6 @@ class Ride:
 def ride_from_row(row):
     return Ride(
         lpep_pickup_datetime=row['lpep_pickup_datetime'],
-        lpep_dropoff_datetime=row['lpep_dropoff_datetime'],
         PULocationID=int(row['PULocationID']),
         DOLocationID=int(row['DOLocationID']),
         passenger_count=int(row['passenger_count']),
